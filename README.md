@@ -23,7 +23,7 @@ RegReaderX is a specialized Java application for extracting registration data fr
 
 ## Installation
 
-1. Download the latest release JAR file from the [Releases](https://github.com/YourUsername/RegReaderX/releases) page
+1. Download the latest release JAR file from the [Releases](https://github.com/djfremen/regreaderx/releases) page
 2. Ensure Java 6 is installed on your system
 3. Run the application by double-clicking the JAR file or using:
    ```
