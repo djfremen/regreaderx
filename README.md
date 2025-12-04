@@ -30,6 +30,16 @@ RegReaderX is a specialized Java application for extracting registration data fr
    java -jar RegReaderX.jar
    ```
 
+   **Note for GlobalTIS Users:**
+   GlobalTIS comes with a compatible Java version bundled. You can usually find it at:
+   - `C:\Program Files\GlobalTIS\jre\bin\java.exe`
+   - or `C:\Program Files (x86)\GlobalTIS\jre\bin\java.exe`
+
+   You can create a shortcut or batch file to run RegReaderX using this specific Java version if you don't have Java installed system-wide:
+   ```
+   "C:\Program Files\GlobalTIS\jre\bin\java.exe" -jar RegReaderX.jar
+   ```
+
 ## Usage
 
 ### Generating a License Key
