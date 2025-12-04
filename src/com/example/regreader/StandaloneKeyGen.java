@@ -28,9 +28,32 @@ public class StandaloneKeyGen {
         ConsoleAppender appender = new ConsoleAppender(new PatternLayout());
         log.addAppender(appender);
         if (args.length > 0) {
-            setSubscriberID("TIS2WEB");
-            byte[] key = keyAES("TIS2WEB");
-            decode(decryptAES(key, toBytes(args[0])));
+            String[] subscriberIds = {"TIS2WEB", "GlobalTIS"};
+            boolean success = false;
+            
+            for (String subId : subscriberIds) {
+                try {
+                    setSubscriberID(subId);
+                    byte[] key = keyAES(subId);
+                    decode(decryptAES(key, toBytes(args[0])));
+                    success = true;
+                    // If successful, stick with this subscriber ID for the rest of the process
+                    // unless overridden by args[1]
+                    break;
+                } catch (javax.crypto.BadPaddingException e) {
+                    // Failed with this ID, try next
+                    continue;
+                } catch (Exception e) {
+                    // Other errors, log and continue
+                    log.warn("Decryption failed with subscriber ID: " + subId, e);
+                }
+            }
+            
+            if (!success) {
+                System.out.println("Error: Could not decrypt software key with known subscriber IDs.");
+                return;
+            }
+
             authorize();
             if (args.length > 1) {
                 setSubscriberID(args[1]);

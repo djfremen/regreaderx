@@ -78,7 +78,7 @@ public class RegReaderX extends JFrame {
         });
 
         // Online method button (initially disabled)
-        onlineMethodButton = new JButton("Use Bojar Online Method");
+        onlineMethodButton = new JButton("Use Bojer Online Method");
         onlineMethodButton.setFont(new Font("Arial", Font.BOLD, 14));
         onlineMethodButton.setBackground(new Color(173, 216, 230)); // Light blue
         onlineMethodButton.setForeground(Color.BLACK);
@@ -164,7 +164,7 @@ public class RegReaderX extends JFrame {
         add(bottomPanel, BorderLayout.SOUTH);
 
         // Credits label
-        JLabel creditsLabel = new JLabel("compiled by djFremen SAABcentral, trionictuning & MHHauto. Special Thanks Bojar & Scarymistake", SwingConstants.CENTER);
+        JLabel creditsLabel = new JLabel("compiled by djFremen SAABcentral, trionictuning & MHHauto. Special Thanks Bojer & Scarymistake", SwingConstants.CENTER);
         creditsLabel.setForeground(Color.BLUE);
         creditsLabel.setFont(new Font("Arial", Font.PLAIN, 12));
         add(creditsLabel, BorderLayout.PAGE_END);
