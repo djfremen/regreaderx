@@ -25,7 +25,7 @@ public class RegReaderX extends JFrame {
     private static final Logger log = Logger.getLogger(RegReaderX.class);
 
     // Application version
-    private static final String APP_VERSION = "1.5.4";
+    private static final String APP_VERSION = "1.5.5";
 
     // Cached UI components
     private final JButton selectPdfButton;
